@@ -14,7 +14,11 @@
   --panel-2: rgba(44, 24, 33, 0.9);
   --shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
 }
-
+/* Storefront and book page typography */
+body,
+body * {
+  font-family: "Comic Sans MS", "Comic Sans", Arial, sans-serif !important;
+}
 *,
 *::before,
 *::after {
