@@ -630,31 +630,58 @@ html {
   object-position: center;
 }
 
-.homepage-dropdown {
-  min-width: 0;
-  max-width: 100%;
+.homepage-actions {
+  text-align: center;
 }
 
-.homepage-dropdown > summary {
-  cursor: pointer;
-  padding: 0.75rem;
+.homepage-floating-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 20px;
+  max-width: 1060px;
+  margin: 200px auto 36px;
+  padding-inline: 12px;
 }
 
-.site-header .homepage-dropdown[open] > .site-page-nav {
-  display: grid !important;
-  position: static !important;
-  inset: auto !important;
-  transform: none !important;
-  width: 100% !important;
-  min-width: 0 !important;
-  box-sizing: border-box;
-  max-height: 55vh;
-  overflow-y: auto;
-}
-
-.site-header .homepage-dropdown > .site-page-nav a {
-  white-space: normal;
+.homepage-floating-nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  padding: 14px 18px;
+  border: 1px solid #dba044;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #341428, #130910);
+  box-shadow: 0 7px 20px rgba(255, 73, 157, 0.18);
+  color: #fff4d2;
+  text-align: center;
+  text-decoration: none;
   overflow-wrap: anywhere;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.homepage-floating-nav a:hover,
+.homepage-floating-nav a:focus-visible {
+  z-index: 1;
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(255, 73, 157, 0.4);
+}
+
+.homepage-floating-nav a:focus-visible {
+  outline: 2px solid #ff8fc4;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-floating-nav a {
+    transition: none;
+  }
+
+  .homepage-floating-nav a:hover,
+  .homepage-floating-nav a:focus-visible {
+    transform: none;
+  }
 }
 
 .homepage-mailbox {
@@ -691,27 +718,7 @@ html {
       <span class="brand-logo"><img src="logo.png" alt=""></span>
       <h1 class="brand-name">Scruffy Butt Digital Designs</h1>
     </a>
-    <div class="home-masthead-layout">
-      <details class="home-masthead-menu homepage-dropdown">
-        <summary>Menu</summary>
-        <nav class="site-page-nav" aria-label="Main navigation">
-<a href="about.html">Paws, Passion &amp; Purpose: The Story Behind Who I Am</a>
-<a href="gallery.html">Flex &amp; Finesse ShowCase</a>
-
-<a href="digital-media.html">Scruffy Digital Directory</a>
-<a href="bookstore.html">The Royal Paw Marketplace</a>
-<a href="design-catalog.html">Design Catalog</a>
-<a href="creative-services.html">Creative Services</a>
-
-<a href="forms.html">Wishes &amp; Requests Vault</a>
-<a href="customer-agreement-center.html">Customer Agreement Center</a>
-<a href="bundled-packages.html">The Sparkle &amp; Save Bundled Packages</a>
-<a href="partnerships.html">The Pink Collar Collective</a>
-<a href="policies.html">The Fine Print</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">The Luxe Lounge</a>
-</nav>
-      </details>
+    <div class="homepage-actions">
       <div class="home-slogan">
         <p class="slogan-text">🐾 Put Some Scruff on Your Stuff 🐾</p>
         <a href="bookstore.html" class="btn btn-primary">Shop Digital</a>
@@ -720,6 +727,21 @@ html {
         </a>
       </div>
     </div>
+    <nav class="homepage-floating-nav" aria-label="Main navigation">
+      <a href="about.html">Paws, Passion &amp; Purpose: The Story Behind Who I Am</a>
+      <a href="gallery.html">Flex &amp; Finesse ShowCase</a>
+      <a href="digital-media.html">Scruffy Digital Directory</a>
+      <a href="bookstore.html">The Royal Paw Marketplace</a>
+      <a href="design-catalog.html">Design Catalog</a>
+      <a href="creative-services.html">Creative Services</a>
+      <a href="forms.html">Wishes &amp; Requests Vault</a>
+      <a href="customer-agreement-center.html">Customer Agreement Center</a>
+      <a href="bundled-packages.html">The Sparkle &amp; Save Bundled Packages</a>
+      <a href="partnerships.html">The Pink Collar Collective</a>
+      <a href="policies.html">The Fine Print</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">The Luxe Lounge</a>
+    </nav>
   </div>
 </header>
 
