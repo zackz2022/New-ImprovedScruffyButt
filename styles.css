@@ -2760,3 +2760,37 @@ img { max-width: 100%; display: block; }
   width: 5rem;
   margin-inline-start: 8px;
 }
+@media (max-width: 820px) {
+  .site-header .site-mobile-menu {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .site-header .site-mobile-menu[open] > nav {
+    display: flex !important;
+    flex-direction: column;
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100%;
+    max-height: 55vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: #21121b;
+    border: 1px solid #d9b54a;
+    border-radius: 0.75rem;
+  }
+
+  .site-header .site-mobile-menu[open] > nav a {
+    display: block;
+    padding: 0.65rem 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
