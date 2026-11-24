@@ -5,42 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Natural Anxiety Relief | Scruffy Butt Digital Designs</title>
   <meta name="description" content="Explore general relaxation and wellness practices for everyday stress.">
-  <link rel="stylesheet" href="../styles.css">
-  <style>
-    .book-sales-cover {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 38rem;
-      object-fit: contain;
-      object-position: center top;
-    }
-    @media (max-width: 640px) {
-      .book-sales-cover { max-height: 28rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="book-sales-page">
   <main class="container book-sales">
     <nav class="book-sales-nav" aria-label="Bookstore">
-      <a href="../index.html#shopGrid">Back to bookstore</a>
-      <a href="../index.html#book-cart-heading">View cart</a>
-      <a href="../customer-agreement-center.html">Customer Agreement Center</a>
+      <a href="bookstore.html#shopGrid">Back to bookstore</a>
+      <a href="bookstore.html#book-cart-heading">View cart</a>
+      <a href="customer-agreement-center.html">Customer Agreement Center</a>
     </nav>
     <article class="book-sales-layout">
-      <img class="book-sales-cover" src="../covers/book-52.webp" alt="Cover of Natural Anxiety Relief">
+      <img class="book-sales-cover" src="covers/book-52.webp" alt="Cover of Natural Anxiety Relief">
       <div>
         <p class="book-sales-category">Relaxation · Digital book</p>
         <h1>Natural Anxiety Relief</h1>
         <h2>About the book</h2>
-        <p>Explore general relaxation and wellness practices for everyday stress. Make space for everyday relaxation and learn to notice which routines help you feel more grounded during stressful moments.</p>
+        <p class="book-hook"><strong>When everyday stress feels relentless, making room for calm can seem difficult.</strong></p>
+        <p>Explore general relaxation and wellness practices that may complement a broader approach to managing stress. Consider how personal routines and moments of reflection can fit into daily life.</p>
+        <h3>Is this book for you?</h3>
+        <p>For readers interested in supportive habits, not a replacement for mental health care.</p>
+        <p>Explore the digital guide and decide what your next step could be.</p><p class="book-note">Educational wellness information, not medical advice or a substitute for professional care.</p>
         <p class="book-sales-price">$29.00 USD</p>
-        <form action="../index.html#book-cart-heading" method="get">
+        <form action="bookstore.html#book-cart-heading" method="get">
           <input type="hidden" name="add-book" value="52">
-          <label>
-            Quantity
-            <input type="number" name="quantity" value="1" min="1" max="20" step="1" required>
-          </label>
+          <label>Quantity <input type="number" name="quantity" min="1" max="20" value="1" required></label>
           <button class="btn btn-primary" type="submit">Add to Cart</button>
         </form>
       </div>

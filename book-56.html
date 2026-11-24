@@ -5,42 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Capsule Wardrobe Guide | Scruffy Butt Digital Designs</title>
   <meta name="description" content="Explore a simpler, more intentional approach to building and organizing your wardrobe.">
-  <link rel="stylesheet" href="../styles.css">
-  <style>
-    .book-sales-cover {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 38rem;
-      object-fit: contain;
-      object-position: center top;
-    }
-    @media (max-width: 640px) {
-      .book-sales-cover { max-height: 28rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="book-sales-page">
   <main class="container book-sales">
     <nav class="book-sales-nav" aria-label="Bookstore">
-      <a href="../index.html#shopGrid">Back to bookstore</a>
-      <a href="../index.html#book-cart-heading">View cart</a>
-      <a href="../customer-agreement-center.html">Customer Agreement Center</a>
+      <a href="bookstore.html#shopGrid">Back to bookstore</a>
+      <a href="bookstore.html#book-cart-heading">View cart</a>
+      <a href="customer-agreement-center.html">Customer Agreement Center</a>
     </nav>
     <article class="book-sales-layout">
-      <img class="book-sales-cover" src="../covers/book-56.webp" alt="Cover of The Capsule Wardrobe Guide">
+      <img class="book-sales-cover" src="covers/book-56.webp" alt="Cover of The Capsule Wardrobe Guide">
       <div>
         <p class="book-sales-category">Style · Digital book</p>
         <h1>The Capsule Wardrobe Guide</h1>
         <h2>About the book</h2>
-        <p>Explore a simpler, more intentional approach to building and organizing your wardrobe. Build around pieces you actually wear and look for combinations that fit your routine, climate, and personal style.</p>
+        <p class="book-hook"><strong>A closet full of clothes does not always make getting dressed easier.</strong></p>
+        <p>Explore the capsule wardrobe concept and consider how a more intentional selection of clothing can reflect your lifestyle and personal taste. Think about what you actually wear rather than what you feel pressured to own.</p>
+        <h3>Is this book for you?</h3>
+        <p>For readers seeking a simpler, more purposeful wardrobe.</p>
+        <p>Explore the digital guide and decide what your next step could be.</p>
         <p class="book-sales-price">$29.00 USD</p>
-        <form action="../index.html#book-cart-heading" method="get">
+        <form action="bookstore.html#book-cart-heading" method="get">
           <input type="hidden" name="add-book" value="56">
-          <label>
-            Quantity
-            <input type="number" name="quantity" value="1" min="1" max="20" step="1" required>
-          </label>
+          <label>Quantity <input type="number" name="quantity" min="1" max="20" value="1" required></label>
           <button class="btn btn-primary" type="submit">Add to Cart</button>
         </form>
       </div>

@@ -5,42 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Digital Detox &amp; Deep Focus | Scruffy Butt Digital Designs</title>
   <meta name="description" content="Explore healthier technology habits and strategies for focused time.">
-  <link rel="stylesheet" href="../styles.css">
-  <style>
-    .book-sales-cover {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 38rem;
-      object-fit: contain;
-      object-position: center top;
-    }
-    @media (max-width: 640px) {
-      .book-sales-cover { max-height: 28rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="book-sales-page">
   <main class="container book-sales">
     <nav class="book-sales-nav" aria-label="Bookstore">
-      <a href="../index.html#shopGrid">Back to bookstore</a>
-      <a href="../index.html#book-cart-heading">View cart</a>
-      <a href="../customer-agreement-center.html">Customer Agreement Center</a>
+      <a href="bookstore.html#shopGrid">Back to bookstore</a>
+      <a href="bookstore.html#book-cart-heading">View cart</a>
+      <a href="customer-agreement-center.html">Customer Agreement Center</a>
     </nav>
     <article class="book-sales-layout">
-      <img class="book-sales-cover" src="../covers/book-42.webp" alt="Cover of Digital Detox &amp; Deep Focus">
+      <img class="book-sales-cover" src="covers/book-42.webp" alt="Cover of Digital Detox &amp; Deep Focus">
       <div>
         <p class="book-sales-category">Digital Wellness · Digital book</p>
         <h1>Digital Detox &amp; Deep Focus</h1>
         <h2>About the book</h2>
-        <p>Explore healthier technology habits and strategies for focused time. Notice which alerts and habits interrupt your attention, then make room for stretches of time away from the screen.</p>
+        <p class="book-hook"><strong>When was the last time you gave one thing your full attention?</strong></p>
+        <p>Explore the relationship between digital habits and focused time. Consider how changing your interaction with technology might make room for meaningful work, rest and activities away from a screen.</p>
+        <h3>Is this book for you?</h3>
+        <p>For readers who want to reclaim attention without abandoning technology altogether.</p>
+        <p>Explore the digital guide and decide what your next step could be.</p>
         <p class="book-sales-price">$29.00 USD</p>
-        <form action="../index.html#book-cart-heading" method="get">
+        <form action="bookstore.html#book-cart-heading" method="get">
           <input type="hidden" name="add-book" value="42">
-          <label>
-            Quantity
-            <input type="number" name="quantity" value="1" min="1" max="20" step="1" required>
-          </label>
+          <label>Quantity <input type="number" name="quantity" min="1" max="20" value="1" required></label>
           <button class="btn btn-primary" type="submit">Add to Cart</button>
         </form>
       </div>

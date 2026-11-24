@@ -2794,3 +2794,7 @@ img { max-width: 100%; display: block; }
     overflow-wrap: anywhere;
   }
 }
+
+.book-hook { font-size: 1.2rem; line-height: 1.5; }
+.book-note { font-size: .9rem; }
+.book-sales form input[type=number] { width: 5rem; margin: .5rem; }

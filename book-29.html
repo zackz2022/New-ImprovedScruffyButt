@@ -5,42 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Gratitude Transformation | Scruffy Butt Digital Designs</title>
   <meta name="description" content="Explore gratitude practices and intentional personal reflection.">
-  <link rel="stylesheet" href="../styles.css">
-  <style>
-    .book-sales-cover {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 38rem;
-      object-fit: contain;
-      object-position: center top;
-    }
-    @media (max-width: 640px) {
-      .book-sales-cover { max-height: 28rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="book-sales-page">
   <main class="container book-sales">
     <nav class="book-sales-nav" aria-label="Bookstore">
-      <a href="../index.html#shopGrid">Back to bookstore</a>
-      <a href="../index.html#book-cart-heading">View cart</a>
-      <a href="../customer-agreement-center.html">Customer Agreement Center</a>
+      <a href="bookstore.html#shopGrid">Back to bookstore</a>
+      <a href="bookstore.html#book-cart-heading">View cart</a>
+      <a href="customer-agreement-center.html">Customer Agreement Center</a>
     </nav>
     <article class="book-sales-layout">
-      <img class="book-sales-cover" src="../covers/book-29.webp" alt="Cover of The Gratitude Transformation">
+      <img class="book-sales-cover" src="covers/book-29.webp" alt="Cover of The Gratitude Transformation">
       <div>
         <p class="book-sales-category">Gratitude · Digital book</p>
         <h1>The Gratitude Transformation</h1>
         <h2>About the book</h2>
-        <p>Explore gratitude practices and intentional personal reflection. Set aside time to notice what supported you today and reflect on where you want to give more of your attention.</p>
+        <p class="book-hook"><strong>What might change if you noticed what is going right as often as what is going wrong?</strong></p>
+        <p>Explore gratitude as a practice of intentional reflection, without pretending that life&#x27;s difficulties disappear. Consider how paying attention to meaningful moments can offer a different perspective on everyday experiences.</p>
+        <h3>Is this book for you?</h3>
+        <p>For readers seeking a more reflective and appreciative outlook.</p>
+        <p>Explore the digital guide and decide what your next step could be.</p>
         <p class="book-sales-price">$29.00 USD</p>
-        <form action="../index.html#book-cart-heading" method="get">
+        <form action="bookstore.html#book-cart-heading" method="get">
           <input type="hidden" name="add-book" value="29">
-          <label>
-            Quantity
-            <input type="number" name="quantity" value="1" min="1" max="20" step="1" required>
-          </label>
+          <label>Quantity <input type="number" name="quantity" min="1" max="20" value="1" required></label>
           <button class="btn btn-primary" type="submit">Add to Cart</button>
         </form>
       </div>

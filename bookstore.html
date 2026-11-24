@@ -856,6 +856,7 @@ class="shop-results">
     <span id="cart-empty">Your cart is empty.</span>
     <strong>Total: <span id="cart-total">$0.00</span></strong>
   </div>
+  <p class="book-note">Checkout is currently in PayPal test mode. No real payment or book delivery is processed through this test checkout.</p>
   <div id="paypal-button-container"></div>
   <p id="checkout-status" role="status" aria-live="polite">
     Secure PayPal checkout will appear after payment settings are configured.
@@ -1869,7 +1870,7 @@ function loadPayPalCheckout() {
         cart.clear();
         renderCart();
         setCheckoutStatus(
-          `Payment complete. We will email your PDF to the address on your PayPal receipt. Order ${result.orderId}.`
+          `Test payment complete. No book delivery is triggered by this test. Order ${result.orderId}.`
         );
         document.getElementById("purchase-thank-you").hidden = false;
         document.getElementById("purchase-thank-you-heading").focus();
