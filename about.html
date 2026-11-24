@@ -95,32 +95,32 @@
         <div class="container about-story-grid">
           <aside class="about-quote">
             <span>I love making things people can use.</span>
-            <strong>Thereâs always something new to learn.</strong>
+            <strong>There's always something new to learn.</strong>
           </aside>
 
           <article class="story-content">
             <p>
-              Iâm Celeste Hannah, a mom of three, a wife to my amazing husband, and a creative person who
-              loves to learn. Iâve survived abuse and worked hard to overcome addiction. These days, my life
-              is full of legal battles. My husband is facing the possibility of life in prison, and Iâm
+              I'm Celeste Hannah, a mom of three, a wife to my amazing husband, and a creative person who
+              loves to learn. I've survived abuse and worked hard to overcome addiction. These days, my life
+              is full of legal battles. My husband is facing the possibility of life in prison, and I'm
               dealing with data breach settlements after my Social Security number was exposed and identity
-              theft turned my life upside down. Through it all, Iâm pursuing my college degree and a
-              full-time management position while launching Scruffy Butt Digital Designs. Iâm proud of
-              how far Iâve come and determined to build a more stable future for my family.
+              theft turned my life upside down. Through it all, I'm pursuing my college degree and a
+              full-time management position while launching Scruffy Butt Digital Designs. I'm proud of
+              how far I've come and determined to build a more stable future for my family.
             </p>
 
             <h2>How I built Scruffy Butt Digital Designs</h2>
             <p>
               Scruffy Butt started with an idea I wanted to make real. I built the website, designed book covers,
               and created an online bookstore and marketplace for digital guides and custom designs. Seeing my
-              ideas become pages people could actually visit made me proud of how far Iâd come. I want the
+              ideas become pages people could actually visit made me proud of how far I'd come. I want the
               guides I offer, from budgeting to personal growth, to give someone a practical place to start
-              when theyâre working toward a goal of their own.
+              when they're working toward a goal of their own.
             </p>
 
-            <h2>What Iâm working toward</h2>
+            <h2>What I'm working toward</h2>
             <p>
-              Iâm studying Computer Science and working toward a career in cybersecurity. I want to help people
+              I'm studying Computer Science and working toward a career in cybersecurity. I want to help people
               protect their privacy and feel more confident online, especially small business owners who are
               figuring out technology as they go. As Scruffy Butt grows, I hope to take on more website design
               projects and create plain-language resources for staying safe online.
@@ -128,10 +128,10 @@
 
             <h2>What keeps me going</h2>
             <p>
-              Iâm still fighting for the future I pictured when I decided to go back to school. Every class I
+              I'm still fighting for the future I pictured when I decided to go back to school. Every class I
               finish and every project I put out into the world brings me a little closer to the stability
-              and independence I want for my family. If youâre rebuilding your life too, I hope seeing what
-              Iâve built encourages you to give that idea youâve been holding onto a real chance.
+              and independence I want for my family. If you're rebuilding your life too, I hope seeing what
+              I've built encourages you to give that idea you've been holding onto a real chance.
             </p>
 
             <div class="story-signoff">
@@ -168,14 +168,48 @@
           <ul>
             <li><a href="mailto:misshannah@scruffybuttdigitaldesigns.com">Customer Service</a></li>
             <li><a href="tel:+18505164171">Call us</a></li>
-            <li>MondayâSunday Â· 10 AMâ10 PM</li>
+            <li>Monday&#8211;Sunday &#183; 10 AM&#8211;10 PM</li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <span>Â© 2026 Scruffy Butt Digital Designs</span>
-        <span>ð¾ Put Some Scruff on Your Stuff</span>
+        <span>&#169; 2026 Scruffy Butt Digital Designs</span>
+        <span>&#128062; Put Some Scruff on Your Stuff</span>
       </div>
     </footer>
+    <script>
+      (() => {
+        const key = "scruffy:about-scroll:" + location.pathname;
+
+        function saveScrollPosition() {
+          try {
+            sessionStorage.setItem(key, String(window.scrollY));
+          } catch {
+            // The browser may block session storage.
+          }
+        }
+
+        window.addEventListener("pagehide", saveScrollPosition);
+        document.addEventListener("visibilitychange", () => {
+          if (document.visibilityState === "hidden") saveScrollPosition();
+        });
+
+        window.addEventListener("pageshow", event => {
+          const navigation = performance.getEntriesByType("navigation")[0];
+          if (event.persisted || location.hash || navigation?.type !== "reload") return;
+
+          try {
+            const position = Number(sessionStorage.getItem(key));
+            if (position > 0) {
+              requestAnimationFrame(() => {
+                if (window.scrollY === 0) window.scrollTo({ top: position, behavior: "instant" });
+              });
+            }
+          } catch {
+            // Leave scroll restoration to the browser.
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
