@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="description"
+  content="Scruffy Butt Digital Designs — creative digital products, guides, resources and designs with personality and attitude."
+>
+
+<title>Why Scruffy Butt?</title>
+
+  
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+/* ==================================================
+   SCRUFFY BUTT DIGITAL SHOP
+================================================== */
+
+*
+  {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.digital-shop {
+  padding: 80px 20px;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #46142f 0%,
+      #180811 32%,
+      #080306 65%,
+      #020102 100%
+    );
+
+  color: white;
+}
+
+.shop-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.shop-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.shop-heading .eyebrow {
+  color: #ff69b4;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+
+.shop-heading h2 {
+  font-size: clamp(34px, 6vw, 60px);
+  margin: 10px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff4fa8,
+      #ffd36b,
+      #ff75ba
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.shop-heading p {
+  max-width: 760px;
+  margin: auto;
+
+  color: #e2d6dd;
+  font-size: 17px;
+}
+
+
+/* SEARCH */
+
+.shop-search-wrap {
+  max-width: 650px;
+  margin: 30px auto 22px;
+}
+
+.shop-search {
+  width: 100%;
+
+  padding: 16px 20px;
+
+  border-radius: 50px;
+
+  border: 2px solid #c88b38;
+
+  background: #10070d;
+
+  color: white;
+
+  font-size: 16px;
+
+  outline: none;
+
+  box-shadow:
+    0 0 12px rgba(255, 76, 166, .25);
+}
+
+.shop-search:focus {
+  border-color: #ff55a8;
+
+  box-shadow:
+    0 0 15px rgba(255, 76, 166, .6);
+}
+
+.shop-search::placeholder {
+  color: #bbaab3;
+}
+
+
+/* CATEGORY BUTTONS */
+
+.shop-filters {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 40px;
+}
+
+.shop-filter {
+  border: 1px solid #ff5aaa;
+
+  background: #160912;
+
+  color: white;
+
+  padding: 10px 15px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  transition: .25s;
+}
+
+.shop-filter:hover,
+.shop-filter.active {
+  background:
+    linear-gradient(
+      135deg,
+      #e92180,
+      #ff67b2,
+      #c68a35
+    );
+
+  border-color: #ffd36b;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 12px rgba(255, 72, 162, .7);
+}
+
+
+/* RESULTS */
+
+.shop-results {
+  text-align: center;
+
+  color: #d8c6d0;
+
+  margin: -20px 0 30px;
+
+  font-weight: 600;
+}
+
+
+/* PRODUCT GRID */
+
+.shop-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 28px;
+}
+
+
+/* CARD */
+
+.shop-card {
+  padding: 3px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff3d9c,
+      #ffd36b,
+      #ff65b3,
+      #9f6826
+    );
+
+  transition: .3s;
+
+  box-shadow:
+    0 0 12px rgba(255, 61, 156, .3);
+}
+
+.shop-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 0 22px rgba(255, 61, 156, .7),
+    0 0 35px rgba(255, 210, 90, .25);
+}
+
+.shop-card-inner {
+  height: 100%;
+
+  border-radius: 21px;
+
+  padding: 17px;
+
+  background:
+    linear-gradient(
+      155deg,
+      #25101c,
+      #090507 60%,
+      #020102
+    );
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* FAUX BOOK COVER */
+
+.shop-cover {
+  height: 280px;
+
+  border-radius: 16px;
+
+  border: 2px solid #dba044;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #57183c,
+      #1c0914 50%,
+      #050304 100%
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 25px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow:
+    inset 0 0 35px rgba(255, 80, 165, .16),
+    0 0 14px rgba(255, 76, 164, .4);
+}
+
+.shop-cover::before {
+  content: "✦";
+
+  position: absolute;
+
+  top: 13px;
+
+  left: 17px;
+
+  color: #ffd36b;
+
+  font-size: 20px;
+}
+
+.shop-cover::after {
+  content: "✦";
+
+  position: absolute;
+
+  bottom: 13px;
+
+  right: 17px;
+
+  color: #ff5bab;
+
+  font-size: 20px;
+}
+
+.cover-icon {
+  font-size: 52px;
+
+  margin-bottom: 14px;
+
+  filter:
+    drop-shadow(
+      0 0 8px rgba(255, 90, 180, .7)
+    );
+}
+
+.cover-title {
+  font-family: "Comic Sans MS", "Comic Sans";
+
+  font-size: 21px;
+
+  font-weight: bold;
+
+  line-height: 1.25;
+
+  color: white;
+}
+
+.cover-brand {
+  margin-top: 18px;
+
+  color: #ffd36b;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* PRODUCT INFORMATION */
+
+.shop-info {
+  padding: 18px 4px 3px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex-grow: 1;
+}
+
+.shop-category {
+  align-self: center;
+
+  border: 1px solid #ff5aaa;
+
+  border-radius: 30px;
+
+  color: #ffabd3;
+
+  padding: 5px 11px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.shop-info h3 {
+  font-family: "Comic Sans MS", "Comic Sans";
+
+  text-align: center;
+
+  font-size: 20px;
+
+  line-height: 1.3;
+
+  margin: 0;
+
+  color: white;
+}
+
+.shop-sparkle {
+  text-align: center;
+
+  color: #ff64af;
+
+  letter-spacing: 7px;
+
+  margin: 10px 0;
+
+  text-shadow:
+    0 0 7px #ff419c;
+}
+
+.shop-info p {
+  color: #d9cfd5;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  flex-grow: 1;
+
+  margin-bottom: 15px;
+}
+
+
+/* PRICE */
+
+.product-price {
+  text-align: center;
+
+  font-family: "Comic Sans MS", "Comic Sans";
+
+  font-size: 32px;
+
+  font-weight: 900;
+
+  color: #ffd36b;
+
+  margin: 7px 0 18px;
+
+  text-shadow:
+    0 0 8px rgba(255, 211, 107, .75),
+    0 0 15px rgba(255, 79, 168, .45);
+}
+
+
+/* BUY BUTTON */
+
+.shop-buy {
+  display: block;
+
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border-radius: 50px;
+
+  border: 1px solid #ffd36b;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #df1978,
+      #ff65b0 55%,
+      #c4862e
+    );
+
+  transition: .25s;
+
+  box-shadow:
+    0 0 10px rgba(255, 65, 158, .45);
+}
+
+.shop-buy:hover {
+  transform: scale(1.03);
+
+  box-shadow:
+    0 0 16px #ff459e,
+    0 0 25px rgba(255, 210, 90, .4);
+}
+
+.shop-cart {
+  margin: 0 0 32px;
+  padding: 22px;
+  border: 2px solid #dba044;
+  border-radius: 20px;
+  background: rgba(16, 7, 13, .92);
+}
+
+.shop-cart h3 {
+  margin: 0 0 12px;
+  color: #ffd36b;
+}
+
+.shop-cart-items {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.shop-cart-item,
+.shop-cart-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.shop-cart-item {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 211, 107, .25);
+}
+
+.shop-cart-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shop-cart-controls button {
+  min-width: 34px;
+  min-height: 34px;
+  border: 1px solid #ffd36b;
+  border-radius: 50%;
+  background: #25101c;
+  color: #fff;
+}
+
+.shop-cart-summary {
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  color: #ffd36b;
+}
+
+#paypal-button-container {
+  width: min(100%, 440px);
+  min-height: 44px;
+}
+
+#checkout-status {
+  margin: 12px 0 0;
+  color: #e2d6dd;
+}
+
+.shop-card .shop-buy {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.shop-publisher-link {
+  display: block;
+  margin-top: 10px;
+  color: #ffd36b;
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+/* PHONE */
+
+@media(max-width: 600px) {
+
+  .digital-shop {
+    padding: 55px 14px;
+  }
+
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-card {
+    max-width: 390px;
+
+    width: 100%;
+
+    margin: auto;
+  }
+
+  .shop-filter {
+    font-size: 11px;
+
+    padding: 8px 10px;
+  }
+
+}
+
+
+/* Show the full cover even if the shared stylesheet is cached. */
+.shop-cover.book-cover-link {
+  display: block;
+  height: auto;
+  padding: 0;
+  background: #121014;
+}
+.shop-cover.book-cover-link::before,
+.shop-cover.book-cover-link::after {
+  display: none;
+}
+.shop-cover.book-cover-link img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  object-position: center;
+}
+
+.homepage-dropdown {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.homepage-dropdown > summary {
+  cursor: pointer;
+  padding: 0.75rem;
+}
+
+.site-header .homepage-dropdown[open] > .site-page-nav {
+  display: grid !important;
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
+.site-header .homepage-dropdown > .site-page-nav a {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.homepage-mailbox {
+  margin: 0.35rem;
+  white-space: normal;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================================================
+     HEADER
+================================================ -->
+
+<header class="site-header home-masthead">
+  <div class="container">
+    <a class="brand home-brand" href="index.html">
+      <span class="brand-logo"><img src="logo.png" alt=""></span>
+      <h1 class="brand-name">Scruffy Butt Digital Designs</h1>
+    </a>
+    <div class="home-masthead-layout">
+      <details class="home-masthead-menu homepage-dropdown">
+        <summary>Menu</summary>
+        <nav class="site-page-nav" aria-label="Main navigation">
+<a href="about.html">Paws, Passion &amp; Purpose: The Story Behind Who I Am</a>
+<details class="home-showcase">
+  <summary>Flex &amp; Finesse ShowCase</summary>
+  <div class="showcase-slider" data-showcase>
+  <div class="showcase-controls">
+    <button type="button" data-direction="-1" aria-label="Previous artwork">←</button>
+    <button type="button" data-direction="1" aria-label="Next artwork">→</button>
+  </div>
+  <div class="showcase-track" tabindex="0" role="region" aria-label="Artwork slides. Swipe or use the arrow keys."></div>
+</div>
+  <a class="showcase-full-link" href="gallery.html">Open the full showcase</a>
+</details>
+<a href="https://tally.so/r/Dq7W9l">Glitter &amp; Grind Services</a>
+<a href="digital-media.html">Scruffy Digital Directory</a>
+<a href="bookstore.html">The Royal Paw Marketplace</a>
+<a href="multi-job-designs.html">Glitter &amp; Grind Designs</a>
+<a href="forms.html">Wishes &amp; Requests Vault</a>
+<a href="customer-agreement-center.html">Customer Agreement Center</a>
+<a href="bundled-packages.html">The Sparkle &amp; Save Bundled Packages</a>
+<a href="partnerships.html">The Pink Collar Collective</a>
+<a href="policies.html">The Fine Print</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">The Luxe Lounge</a>
+</nav>
+      </details>
+      <div class="home-slogan">
+        <p class="slogan-text">🐾 Put Some Scruff on Your Stuff 🐾</p>
+        <a href="bookstore.html" class="btn btn-primary">Shop Digital</a>
+        <a href="https://tally.so/r/Dq7W9l" class="btn btn-primary homepage-mailbox">
+          <span aria-hidden="true">📬</span> Request a Custom Design
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<main id="home">
+<section
+id="features"
+class="features section-spacing">
+
+<div class="container">
+
+
+<div class="section-heading narrow">
+
+<span class="eyebrow">
+Why Scruffy Butt?
+</span>
+
+<h2>
+Digital creativity with personality.
+</h2>
+
+</div>
+
+
+<div class="feature-grid">
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+✨
+</div>
+
+<h3>
+Creative Variety
+</h3>
+
+<p>
+Explore digital resources across
+multiple topics and interests.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🐾
+</div>
+
+<h3>
+Scruffy Style
+</h3>
+
+<p>
+A playful brand built around creativity,
+personality and attitude.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+⚡
+</div>
+
+<h3>
+Easy Access
+</h3>
+
+<p>
+Choose a product and go directly
+to its sales page.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+💖
+</div>
+
+<h3>
+Easy Browsing
+</h3>
+
+<p>
+Search and filter categories to
+quickly find what interests you.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+</main>
+
+
+<!-- ================================================
+     FOOTER
+================================================ -->
+
+<footer
+id="contact"
+class="site-footer">
+
+<div class="container footer-grid">
+
+
+<div>
+
+<a
+href="index.html"
+class="brand"
+aria-label="Scruffy Butt Digital Designs home">
+
+<span class="brand-logo brand-logo-small">
+
+<img
+src="logo.png"
+alt="Scruffy Butt Digital Designs logo">
+
+</span>
+
+<span class="brand-name">
+Scruffy Butt Digital Designs
+</span>
+
+</a>
+
+<p>
+
+Creative digital designs, products and resources
+with personality, imagination and attitude.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Explore
+</h4>
+
+<ul>
+
+<li>
+<a href="design-catalog.html">
+Designs
+</a>
+</li>
+
+<li>
+<a href="digital-media.html">
+Digital Products
+</a>
+</li>
+
+<li>
+<a href="site-features.html">
+About
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>
+Categories
+</h4>
+
+<ul>
+
+<li>
+<a href="digital-media.html">
+Business
+</a>
+</li>
+
+<li>
+<a href="digital-media.html">
+Money
+</a>
+</li>
+
+<li>
+<a href="digital-media.html">
+Lifestyle
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>
+Scruffy Butt
+</h4>
+
+<ul>
+
+<li>
+<a href="digital-media.html">
+Shop
+</a>
+</li>
+
+<li>
+<a href="creative-services.html">
+Creative Services
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="container footer-bottom">
+<a href="https://launchon.it/products/scruffy-butt-digital-designs" target="_blank" rel="noopener">
+  <img src="https://launchon.it/api/badge/scruffy-butt-digital-designs?theme=dark&size=md&type=upvotes" alt="Scruffy Butt Digital Designs on LaunchOnIt">
+</a>
+
+<span>
+© 2026 Scruffy Butt Digital Designs
+</span>
+
+<span>
+🐾 Put Some Scruff on Your Stuff
+</span>
+
+</div>
+
+</footer>
+
+
+<!-- ================================================
+     ORIGINAL WEBSITE JAVASCRIPT
+================================================ -->
+
+<script src="script.js"></script>
+<script src="payment-config.js"></script>
+<script src="affiliate-referral.js"></script>
+
+
+<!-- ================================================
+     DIGITAL SHOP DATABASE
+================================================ -->
+
+
+
+<script src="showcase.js" defer></script>
+</body>
+
+</html>
