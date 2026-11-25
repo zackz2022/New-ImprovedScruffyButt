@@ -856,7 +856,7 @@ class="shop-results">
     <span id="cart-empty">Your cart is empty.</span>
     <strong>Total: <span id="cart-total">$0.00</span></strong>
   </div>
-  <p class="book-note">Checkout is currently in PayPal test mode. No real payment or book delivery is processed through this test checkout.</p>
+  <p class="book-note">PayPal checkout may process a real payment. Books are delivered manually by email, not automatically. After a live payment, <a href="mailto:misshannah@scruffybuttdigitaldesigns.com?subject=Digital%20book%20delivery">contact us</a> with your order number to arrange delivery.</p>
   <div id="paypal-button-container"></div>
   <p id="checkout-status" role="status" aria-live="polite">
     Secure PayPal checkout will appear after payment settings are configured.
@@ -1632,7 +1632,7 @@ function renderShop() {
       <div class="shop-card-inner">
 
 
-        <a class="shop-cover book-cover-link" href="books/book-${bookId}.html" aria-label="Details for ${product.title}">
+        <a class="shop-cover book-cover-link" href="book-${bookId}.html" aria-label="Details for ${product.title}">
           <img src="covers/book-${bookId}.${bookId === 57 ? "png" : "webp"}" alt="" loading="lazy">
         </a>
 
@@ -1647,7 +1647,7 @@ function renderShop() {
 
 
           <h3>
-            <a class="book-title-link" href="books/book-${bookId}.html">${product.title}</a>
+            <a class="book-title-link" href="book-${bookId}.html">${product.title}</a>
           </h3>
 
 
@@ -1894,7 +1894,7 @@ function loadPayPalCheckout() {
         cart.clear();
         renderCart();
         setCheckoutStatus(
-          `Test payment complete. No book delivery is triggered by this test. Order ${result.orderId}.`
+          `PayPal reports the transaction completed. If this was a live payment, contact us with order ${result.orderId} to arrange book delivery by email.`
         );
         document.getElementById("purchase-thank-you").hidden = false;
         document.getElementById("purchase-thank-you-heading").focus();
