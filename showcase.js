@@ -1,7 +1,7 @@
 // Add new showcase pictures here. Paths are relative to index.html.
 const showcaseArtwork = [
   { image: "logo.png", caption: "Scruffy Butt Digital Designs · Brand artwork" },
-  { image: "covers/book-21.webp", caption: "Digital Tools for a Smarter Better Life! · Book cover" },
+  { image: "covers/book-57.png", caption: "Breaking the Urge · Book cover" },
   { image: "covers/book-54.webp", caption: "Sleep Optimization Blueprint · Book cover" },
   { image: "covers/book-36.webp", caption: "Communication Blueprint for Couples · Book cover" }
 ];

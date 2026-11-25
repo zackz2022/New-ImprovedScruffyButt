@@ -1,7 +1,8 @@
 import { affiliateApi, rememberAffiliateOrder, creditAffiliateOrder } from "./affiliate-api.js";
 
 const BOOK_PRICE = 29;
-const BOOK_COUNT = 56;
+const BOOK_COUNT = 55;
+const ACTIVE_BOOK_IDS = new Set(Array.from({ length: 57 }, (_, i) => i + 1).filter(id => id !== 14 && id !== 21));
 const MAX_QUANTITY = 20;
 const PAYPAL_API = {
   live: "https://api-m.paypal.com",
@@ -86,7 +87,7 @@ function validateCart(cart) {
     if (
       !Number.isInteger(id) ||
       id < 1 ||
-      id > BOOK_COUNT ||
+      !ACTIVE_BOOK_IDS.has(id) ||
       !Number.isInteger(quantity) ||
       quantity < 1 ||
       quantity > MAX_QUANTITY ||
