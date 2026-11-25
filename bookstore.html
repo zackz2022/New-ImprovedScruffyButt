@@ -664,6 +664,7 @@ html {
 
 </style>
 
+<link rel="icon" type="image/png" href="logo.png">
 </head>
 
 
@@ -1633,7 +1634,7 @@ function renderShop() {
 
 
         <a class="shop-cover book-cover-link" href="books/book-${bookId}.html" aria-label="Details for ${product.title}">
-          <img src="covers/book-${bookId}.${bookId === 57 ? "png" : "webp"}" alt="" loading="lazy">
+          <img src="${bookId === 57 ? "covers/book-57.png" : `covers/book-${bookId}.webp`}" alt="" loading="lazy">
         </a>
 
         <!-- PRODUCT INFORMATION -->

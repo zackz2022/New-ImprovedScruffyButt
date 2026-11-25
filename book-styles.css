@@ -1,0 +1,104 @@
+/* SCRUFFY BUTT DIGITAL DESIGNS */
+/* Individual book sales page styling */
+
+:root {
+    --scruffy-black: #080808;
+    --scruffy-pink: #ff1493;
+    --scruffy-gold: #d4af37;
+    --scruffy-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--scruffy-black);
+    color: var(--scruffy-white);
+    font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+    margin: 0;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    color: var(--scruffy-gold);
+    overflow-wrap: break-word;
+}
+
+a {
+    color: var(--scruffy-pink);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.scruffy-cart-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.scruffy-cart-form label {
+    color: var(--scruffy-gold);
+    font-weight: bold;
+}
+
+.scruffy-cart-form input[type="number"] {
+    width: 85px;
+    padding: 12px;
+    background: #161616;
+    color: #ffffff;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.scruffy-cart-form button {
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        #ff1493,
+        #c90070
+    );
+    color: #ffffff;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 14px 24px;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255,20,147,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scruffy-cart-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 22px rgba(255,20,147,0.65);
+}
+
+.scruffy-cart-form button:focus-visible,
+.scruffy-cart-form input:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+
+    .scruffy-cart-form {
+        align-items: stretch;
+    }
+
+    .scruffy-cart-form button {
+        width: 100%;
+    }
+
+    h1 {
+        overflow-wrap: break-word;
+    }
+}

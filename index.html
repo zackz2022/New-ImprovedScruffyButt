@@ -17,147 +17,7 @@
 <link rel="stylesheet" href="styles.css">
 
 <style>
-<script>
-(function () {
-  "use strict";
 
-  var WORKER_URL = "https://scruffybuttpaypal.zackswifey1202.workers.dev";
-  var PAYPAL_CLIENT_ID = "Aeuhi_9I2b76JVQElWI8ySmR-en2QIUhvNf6QSn7IdiBhOtbS-G6MDfrZx-DPGKgYNyp1HBMPcTpfaT6";   // public, safe to commit
-  var PRICE = 29;
-
-  /* ---------- adapt this to your existing cart ---------- */
-  function getCart() {
-    return Array.prototype.slice
-      .call(document.querySelectorAll("#catalogue input"))
-      .map(function (input) {
-        return {
-          id: Number(input.dataset.id),
-          quantity: Number(input.value) || 0,
-          name: input.closest(".book").querySelector(".book-name").dataset.name,
-        };
-      })
-      .filter(function (line) { return line.quantity > 0; });
-  }
-  /* ------------------------------------------------------ */
-
-  function referral() {
-    var ref = new URLSearchParams(location.search).get("ref");
-    return ref && /^[a-z0-9-]{3,40}$/.test(ref) ? ref : undefined;
-  }
-
-  function post(path, body) {
-    return fetch(WORKER_URL + path, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-    }).then(function (res) {
-      return res.json().catch(function () { return {}; }).then(function (data) {
-        if (!res.ok) throw new Error(data.error || "Checkout failed (" + res.status + ")");
-        return data;
-      });
-    });
-  }
-
-  function createOrder(cart) {
-    var payload = {
-      cart: cart.map(function (line) {
-        return {
-          id: Number(line.id),
-          quantity: Number(line.quantity),
-          name: String(line.name).trim().slice(0, 127),
-        };
-      }),
-    };
-    var ref = referral();
-    if (ref) payload.referral = ref;
-    return post("/api/orders", payload);
-  }
-
-  function captureOrder(orderId) {
-    return post("/api/orders/" + encodeURIComponent(orderId) + "/capture", {});
-  }
-
-  function loadSdk() {
-    if (window.paypal) return Promise.resolve(window.paypal);
-    return new Promise(function (resolve, reject) {
-      var s = document.createElement("script");
-      s.src = "https://www.paypal.com/sdk/js?client-id=" +
-        encodeURIComponent(PAYPAL_CLIENT_ID) +
-        "&currency=USD&intent=capture&components=buttons";
-      s.async = true;
-      s.onload = function () {
-        window.paypal ? resolve(window.paypal) : reject(new Error("PayPal SDK failed to initialise"));
-      };
-      s.onerror = function () { reject(new Error("Could not load the PayPal SDK")); };
-      document.head.appendChild(s);
-    });
-  }
-
-  function status(message, kind) {
-    var el = document.getElementById("status");
-    if (!el) return;
-    el.textContent = message;
-    el.className = kind || "";
-  }
-
-  function showDownloads(result) {
-    var box = document.getElementById("downloads");
-    if (!box) return;
-    box.innerHTML = "";
-
-    var links = Array.isArray(result.downloads) ? result.downloads : [];
-    if (!links.length) {
-      box.textContent = "Your download links will arrive by email shortly.";
-      return;
-    }
-
-    var heading = document.createElement("p");
-    heading.textContent = "Your ebooks:";
-    box.appendChild(heading);
-
-    links.forEach(function (link) {
-      var a = document.createElement("a");
-      a.href = link.url;
-      a.textContent = "Download book #" + link.bookId;
-      box.appendChild(a);
-    });
-
-    var expiry = document.createElement("p");
-    expiry.textContent = "Links expire " + new Date(links[0].expiresAt).toLocaleString() + ".";
-    box.appendChild(expiry);
-  }
-
-  loadSdk().then(function (paypal) {
-    return paypal.Buttons({
-      style: { layout: "vertical", shape: "rect", color: "gold", label: "paypal" },
-
-      createOrder: function () {
-        return createOrder(getCart()).then(function (order) { return order.id; });
-      },
-
-      onApprove: function (data) {
-        return captureOrder(data.orderID).then(function (result) {
-          if (!result.verified) {
-            throw new Error(result.error || "PayPal could not verify the payment.");
-          }
-          status("Payment complete — order " + result.orderId + " for $" + result.amount + ".", "ok");
-          showDownloads(result);
-        });
-      },
-
-      onCancel: function () { status("Checkout cancelled.", "error"); },
-
-      onError: function (error) {
-        console.error(error);
-        status(error.message || "Checkout failed.", "error");
-      },
-    }).render("#paypal-button-container");
-  }).catch(function (error) {
-    console.error(error);
-    status("Checkout unavailable: " + error.message, "error");
-  });
-})();
-</script>
 
 /* ==================================================
    SCRUFFY BUTT DIGITAL SHOP
@@ -905,6 +765,7 @@ html {
     window.location.replace(bookstore);
   }
 </script>
+<link rel="icon" type="image/png" href="logo.png">
 </head>
 
 

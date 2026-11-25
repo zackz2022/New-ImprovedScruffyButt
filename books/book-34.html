@@ -6,6 +6,7 @@
   <title>Boundaries That Heal | Scruffy Butt Digital Designs</title>
   <meta name="description" content="Explore healthier boundaries and stronger personal relationships.">
   <link rel="stylesheet" href="../styles.css">
+<link rel="icon" type="image/png" href="../logo.png">
 </head>
 <body class="book-sales-page">
   <main class="container book-sales">
@@ -22,10 +23,25 @@
         <h2>About the book</h2>
         <p>Explore healthier boundaries and stronger personal relationships.</p>
         <p class="book-sales-price">$29.00 USD</p>
-        <form action="../index.html#book-cart-heading" method="get">
-          <input type="hidden" name="add-book" value="34">
-          <button class="btn btn-primary" type="submit">Add to Cart</button>
-        </form>
+        <form action="../bookstore.html#book-cart-heading" method="get" class="scruffy-cart-form">
+    <input type="hidden" name="add-book" value="34">
+
+    <label for="quantity-34">Quantity:</label>
+
+    <input
+        id="quantity-34"
+        type="number"
+        name="quantity"
+        min="1"
+        max="20"
+        value="1"
+        required
+    >
+
+    <button class="btn btn-primary" type="submit">
+        Add to Cart
+    </button>
+</form>
       </div>
     </article>
   </main>
