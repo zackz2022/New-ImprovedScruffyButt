@@ -4,7 +4,7 @@ compatibility_date = "2026-11-22"
 
 [vars]
 STORE_ORIGIN = "https://zackz2022.github.io"
-PAYPAL_ENVIRONMENT = "live"
+PAYPAL_ENVIRONMENT = "sandbox"
 
 [[d1_databases]]
 binding = "AFFILIATES_DB"
